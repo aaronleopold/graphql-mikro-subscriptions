@@ -1,5 +1,6 @@
-import Application from './application';
 import 'reflect-metadata';
+
+import Application from './application';
 
 export const PRODUCTION = process.env.NODE_ENV === 'production';
 

@@ -1,17 +1,19 @@
-import express from 'express';
-import { createServer, Server } from 'http';
-import cors from 'cors';
-import { Connection, IDatabaseDriver, MikroORM } from '@mikro-orm/core';
-import { PRODUCTION } from '.';
-import { SqlHighlighter } from '@mikro-orm/sql-highlighter';
-import Message from './entities/message.entity';
-import { buildSchema } from 'type-graphql';
-import { MessageResolver } from './resolvers/message.resolver';
 import { ApolloServer } from 'apollo-server-express';
-import ws from 'ws';
-import path from 'path';
-import { useServer } from 'graphql-ws/lib/use/ws';
+import cors from 'cors';
+import express from 'express';
 import { PubSub } from 'graphql-subscriptions';
+import { useServer } from 'graphql-ws/lib/use/ws';
+import { createServer, Server } from 'http';
+import path from 'path';
+import { buildSchema } from 'type-graphql';
+import ws from 'ws';
+
+import { Connection, IDatabaseDriver, MikroORM } from '@mikro-orm/core';
+import { SqlHighlighter } from '@mikro-orm/sql-highlighter';
+
+import { PRODUCTION } from './';
+import Message from './entities/message.entity';
+import { MessageResolver } from './resolvers/message.resolver';
 
 export default class Application {
   public orm!: MikroORM<IDatabaseDriver<Connection>>;

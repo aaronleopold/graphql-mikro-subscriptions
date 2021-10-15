@@ -1,13 +1,14 @@
 import { PubSubEngine } from 'graphql-subscriptions';
 import {
-  Resolver,
-  Query,
-  Mutation,
   Ctx,
-  Subscription,
-  Root,
+  Mutation,
   PubSub,
+  Query,
+  Resolver,
+  Root,
+  Subscription,
 } from 'type-graphql';
+
 import Message from '../entities/message.entity';
 import SubscriptionEvent from '../enums/SubscriptionEvent';
 import ReqContext from '../interfaces/ReqContext';

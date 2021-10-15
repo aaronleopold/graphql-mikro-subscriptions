@@ -1,4 +1,5 @@
 # graphql-mikro-subscriptions
+
 A template for GraphQL subscriptions and Mikro-Orm
 
 Check out how I made this, step-by-step, [here](https://dev.to/aaronleopold/graphql-subscriptions-and-mikro-orm-in-2021-2hed)
@@ -11,3 +12,5 @@ All that is required is installing the dependencies and running the `dev` script
 yarn
 yarn dev
 ```
+
+Go to [`localhost:5000/graphql`](http://localhost:5000/graphql) for the GraphiQL Playground
